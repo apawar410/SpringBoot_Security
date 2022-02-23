@@ -13,10 +13,9 @@ public class PostController {
     @Autowired
     PostRepository postRepository;
 
-    @PostMapping ("/posts")
+    @PostMapping ("/postGet")
     public Posts createPost (@RequestBody Posts post) {
-
-        return postRepository.save (post);
+       return postRepository.save (post);
     }
 
 }

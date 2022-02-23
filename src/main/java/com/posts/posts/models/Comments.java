@@ -1,5 +1,6 @@
 package com.posts.posts.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.OnDelete;
@@ -16,6 +17,7 @@ import javax.validation.constraints.NotNull;
 public class Comments extends AuditModel {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
+    @JsonIgnore
     private Long id;
 
     @NotNull
